@@ -12,7 +12,8 @@ export function SocketProvider({ children }) {
 
   useEffect(() => {
     if (!user) return;
-    const socket = io('http://localhost:5000', { transports: ['websocket', 'polling'] });
+    const backendUrl = process.env.REACT_APP_API_URL || window.location.origin.replace('3000', '5000');
+    const socket = io(backendUrl, { transports: ['websocket', 'polling'] });
     socketRef.current = socket;
     socket.on('connect', () => setConnected(true));
     socket.on('disconnect', () => setConnected(false));

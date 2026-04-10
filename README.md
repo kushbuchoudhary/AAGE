@@ -2,6 +2,18 @@
 
 A modular, AI-powered educational game engine for aptitude training, placement prep, and cognitive skill development.
 
+## 🚀 Live Deployment
+
+| Component | URL | Status |
+|-----------|-----|--------|
+| **Backend API** | https://aage-production.up.railway.app | ✅ Live |
+| **Frontend** | Coming Soon | 🚀 Deploying |
+| **Health Check** | https://aage-production.up.railway.app/health | ✅ OK |
+
+### Demo Credentials
+- **Admin:** admin@aage.com / Admin@1234
+- **Student:** student@aage.com / Student@123
+
 ## Quick Start
 
 ### Prerequisites
