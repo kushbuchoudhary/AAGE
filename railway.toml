@@ -1,0 +1,16 @@
+# Railway deployment configuration for AAGE Frontend
+root = "frontend"
+
+[[routes]]
+src = "^(?!/api).*"
+dest = "/index.html"
+
+[[services]]
+name = "frontend"
+
+[services.build]
+builder = "nixpacks"
+buildCommand = "npm install && npm run build"
+
+[services.start]
+startCommand = "npx serve -s build -l 3000"
