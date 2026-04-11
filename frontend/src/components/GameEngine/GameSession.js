@@ -119,7 +119,7 @@ export default function GameSession() {
     }, 1000);
 
     return () => clearInterval(timerRef.current);
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+
   }, [timeLimit, phase]);
 
   const handleTimeout = useCallback(() => {
@@ -127,7 +127,7 @@ export default function GameSession() {
     clearInterval(timerRef.current);
     setFeedback('wrong');
     setTimeout(() => advanceToNext(currentDiff, null), 1300);
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+  
   }, [currentDiff]);
 
   // ── Memorize phase ──────────────────────────────────────────────────────────
