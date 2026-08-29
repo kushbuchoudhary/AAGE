@@ -12,7 +12,7 @@ export function SocketProvider({ children }) {
 
   useEffect(() => {
     if (!user) return;
-    const backendUrl = process.env.REACT_APP_API_URL || window.location.origin.replace('3000', '5000');
+    const backendUrl = process.env.REACT_APP_API_URL || 'https://aage-2.onrender.com';
     const socket = io(backendUrl, { transports: ['websocket', 'polling'] });
     socketRef.current = socket;
     socket.on('connect', () => setConnected(true));
